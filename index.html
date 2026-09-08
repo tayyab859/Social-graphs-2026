@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Week 1 investigation of reciprocal and one-way links in Wikipedia's Marvel superhero network.">
+  <title>Marvel Link Mirror · Week 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Marvel Link Mirror home">LINK//MIRROR</a>
+    <nav aria-label="Main navigation">
+      <a href="#question">Question</a>
+      <a href="#explorer">Explorer</a>
+      <a href="#findings">Findings</a>
+      <a href="https://github.com/tayyab859/social-graphs-2026">Code ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">02805 · Social Graphs and Interactions · Week 1</p>
+      <h1>Who links back?</h1>
+      <p class="lede">A directed link is not a friendship. We measured which Marvel character pages exchange links—and which pages receive attention without returning it.</p>
+      <div class="hero-meta">
+        <span>Muhammad Tayyab</span>
+        <span>Frozen Wikipedia snapshot · 26 August 2026</span>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Network summary">
+      <article><strong id="metric-nodes">303</strong><span>character pages</span></article>
+      <article><strong id="metric-edges">1,784</strong><span>directed links</span></article>
+      <article><strong id="metric-mutual">350</strong><span>mutual pairs</span></article>
+      <article><strong id="metric-reciprocity">39.2%</strong><span>directed links reciprocated</span></article>
+    </section>
+
+    <section id="question" class="prose two-column">
+      <div>
+        <p class="section-label">Research question</p>
+        <h2>Does attention travel both ways?</h2>
+      </div>
+      <div>
+        <p>In the course network, an edge <code>A → B</code> means page A links to page B. We asked how often the reverse edge also exists, which characters attract the most one-way attention, and which characters send many links that are not returned.</p>
+        <p>This keeps direction visible. Turning the network undirected would make a mutual relationship and a one-way mention look identical.</p>
+      </div>
+    </section>
+
+    <section class="method-strip" aria-label="Method">
+      <div><span>01</span><p>Add all 303 nodes first, so the 17 isolates survive.</p></div>
+      <div><span>02</span><p>Add the 1,784 directed edges from the frozen edge list.</p></div>
+      <div><span>03</span><p>For every A → B, test whether B → A also exists.</p></div>
+      <div><span>04</span><p>Separate mutual, incoming-only, and outgoing-only neighbours.</p></div>
+    </section>
+
+    <section id="explorer" class="explorer">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Interactive evidence</p>
+          <h2>The reciprocity map</h2>
+          <p>Each dot is a character. Higher means more incoming links; farther right means more outgoing links. Select a character to inspect the direction of its neighbourhood.</p>
+        </div>
+        <div class="segmented" role="group" aria-label="Axis scale">
+          <button class="active" data-scale="linear" type="button">Linear</button>
+          <button data-scale="log" type="button">Log–log</button>
+        </div>
+      </div>
+
+      <div class="visual-grid">
+        <div class="plot-card">
+          <div id="plot-status" class="status" role="status">Loading official course data…</div>
+          <svg id="scatter" viewBox="0 0 760 520" role="img" aria-label="Scatter plot comparing character in-degree and out-degree"></svg>
+          <div class="legend" aria-label="Plot legend">
+            <span><i class="dot magnet"></i>more incoming</span>
+            <span><i class="dot balanced"></i>balanced</span>
+            <span><i class="dot broadcaster"></i>more outgoing</span>
+          </div>
+        </div>
+
+        <aside class="character-card">
+          <label for="character-search">Inspect a character</label>
+          <input id="character-search" list="character-options" placeholder="Try Spider-Man…" autocomplete="off">
+          <datalist id="character-options"></datalist>
+          <div id="character-empty" class="empty-state">Choose any character to see which links are mutual and which travel only one way.</div>
+          <div id="character-detail" hidden>
+            <div class="character-title">
+              <div>
+                <p id="character-type" class="section-label"></p>
+                <h3 id="character-name"></h3>
+              </div>
+              <a id="character-wiki" href="#" target="_blank" rel="noopener" aria-label="Open character page on Wikipedia">Wiki ↗</a>
+            </div>
+            <div class="mini-metrics">
+              <div><strong id="char-in">0</strong><span>in</span></div>
+              <div><strong id="char-out">0</strong><span>out</span></div>
+              <div><strong id="char-mutual">0</strong><span>mutual</span></div>
+            </div>
+            <div class="link-groups">
+              <details open><summary>Mutual links <b id="count-mutual">0</b></summary><p id="list-mutual"></p></details>
+              <details><summary>Incoming only <b id="count-incoming">0</b></summary><p id="list-incoming"></p></details>
+              <details><summary>Outgoing only <b id="count-outgoing">0</b></summary><p id="list-outgoing"></p></details>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <p id="axis-note" class="caption">Linear axes show the original degree values.</p>
+    </section>
+
+    <section class="prose" id="findings">
+      <p class="section-label">What the direction reveals</p>
+      <h2>Three findings</h2>
+      <div class="findings-grid">
+        <article>
+          <span class="finding-number">01</span>
+          <h3>Most links do not come back</h3>
+          <p>Only <strong>700 of 1,784 directed links</strong> belong to mutual pairs. Network reciprocity is therefore <strong>0.392</strong>: roughly two in five arrows have a reverse arrow.</p>
+        </article>
+        <article>
+          <span class="finding-number">02</span>
+          <h3>Spider-Man is an attention magnet</h3>
+          <p>Spider-Man receives 106 links and sends 9. All 9 outgoing links are mutual, leaving <strong>97 incoming-only links</strong>. High visibility does not imply balanced linking.</p>
+        </article>
+        <article>
+          <span class="finding-number">03</span>
+          <h3>Wolverine has the most mutual neighbours</h3>
+          <p>Wolverine exchanges links with <strong>14 characters</strong>, the largest mutual-neighbour count. But 46 additional pages link to Wolverine without receiving a link back.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="rankings">
+      <article>
+        <p class="section-label">Incoming-only links</p>
+        <h2>Attention magnets</h2>
+        <p class="subcopy">Pages that receive links without returning them.</p>
+        <div id="attention-bars" class="bars" aria-label="Ranking of incoming-only links"></div>
+      </article>
+      <article>
+        <p class="section-label">Outgoing-only links</p>
+        <h2>Broadcasters</h2>
+        <p class="subcopy">Pages that send links which are not returned.</p>
+        <div id="broadcast-bars" class="bars" aria-label="Ranking of outgoing-only links"></div>
+      </article>
+    </section>
+
+    <section class="prose two-column interpretation">
+      <div>
+        <p class="section-label">Interpretation</p>
+        <h2>Links record editing, not social relationships</h2>
+      </div>
+      <div>
+        <p>A mutual link means two Wikipedia articles mention one another in their running text. It does not prove that the fictional characters are friends, enemies, or even directly interact.</p>
+        <p>Incoming-only links can indicate broad recognition: many editors need to position their character relative to a famous figure. Outgoing-only links can reflect a page that explains a character through many relationships. These are interpretations of editorial structure, not measurements of personality.</p>
+      </div>
+    </section>
+
+    <section class="limitations">
+      <p class="section-label">Checks and limitations</p>
+      <div class="checks-grid">
+        <article><strong>Node check</strong><span id="check-nodes">Waiting for data</span></article>
+        <article><strong>Edge check</strong><span id="check-edges">Waiting for data</span></article>
+        <article><strong>Pair check</strong><span id="check-pairs">Waiting for data</span></article>
+      </div>
+      <p>The snapshot was frozen on 26 August 2026, so it does not claim to describe Wikipedia forever. The category defines which characters enter the network, redirects were resolved by the course pipeline, and shared navigation templates were excluded. Different collection choices would produce a different graph.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>LINK//MIRROR</strong><span>Week 1 · directed networks</span></div>
+    <p>Data: <a href="https://sunelehmann.com/socialgraphs2026-web/data/">02805 shared playground</a> · <a href="AI_METHODS.md">AI methods</a> · <a href="https://github.com/tayyab859/social-graphs-2026">source</a></p>
+  </footer>
+
+  <div id="tooltip" class="tooltip" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
