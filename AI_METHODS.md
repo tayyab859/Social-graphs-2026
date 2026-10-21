@@ -31,3 +31,11 @@ stored in weeks/week6/results.json. Full source text is downloaded by the script
 only the original link tables and short inspection passages are included here.
 No classmate code or results were copied. The classmate website informed the idea
 of pairing a question-driven post with an interactive explorer.
+
+## Week 6 editorial validation
+
+The agent rechecked the frozen source text, corrected the Storm name claim,
+and added attributed source paraphrases to the four case discussions.
+The main overlap figure is calculated from the saved top-five sets for all
+303 characters: counts for overlaps 0–5 are 26, 69, 73, 85, 45 and 5.
+These checks are AI-assisted and do not imply student or group review.

@@ -2,3 +2,5 @@ em{font-style:normal;color:var(--cyan)}.button{display:inline-block;padding:.8re
 /* Keep all course weeks reachable on narrow screens. */
 nav[aria-label="Weekly navigation"] a { display: inline-block; }
 @media (max-width: 520px) { .site-header:has(nav[aria-label="Weekly navigation"]) { flex-wrap: wrap; } }
+
+.overlap-figure{margin:1.5rem 0;padding:1.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px}.overlap-figure figcaption{margin-bottom:1.5rem}.overlap-row{display:grid;grid-template-columns:80px minmax(0,1fr) 35px;gap:1rem;align-items:center;margin:1rem 0}.overlap-track{background:var(--panel-2);height:26px}.overlap-track span{display:block;height:100%;background:var(--cyan)}.evidence{border-top:1px solid var(--line);padding-top:1rem;font-size:.95rem}.evidence a{text-decoration:underline}@media(max-width:520px){.overlap-figure{padding:1rem}.overlap-row{grid-template-columns:65px minmax(0,1fr) 28px;gap:.6rem}}
