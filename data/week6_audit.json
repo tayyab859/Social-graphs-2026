@@ -1,0 +1,222 @@
+[
+  {
+    "target": "Storm_(Marvel_Comics)",
+    "match": "Human_Torch",
+    "method": "tfidf",
+    "score": 0.3617195249223232,
+    "shared_terms": [
+      "storm",
+      "relationship",
+      "fantastic",
+      "team",
+      "men",
+      "human"
+    ],
+    "excerpts_target": [
+      "Possessing natural leadership skills and formidable powers of her own, Storm has been a member of teams such as the Avengers and the Fantastic Four, as well as the X-Men.",
+      "Publication history\n\n\nCreation\nStorm was created to appear as part of an ensemble: The \"all-new, all-different X-Men\", a re-invention of the traditional X-Men team of the 1960s that had fallen out of popularity."
+    ],
+    "excerpts_match": [
+      "At 16, Storm joined his sister and her fianc\u00e9, Reed Richards, in a space flight in which cosmic radiation transformed those three and spacecraft pilot Ben Grimm into superpowered beings who would become the celebrated superhero team the Fantastic Four.",
+      "Storm briefly joined his nephew Franklin Richards' Fantastic Force team, where he battled his otherdimensional counterpart, Vangaard (formerly Gaard)."
+    ]
+  },
+  {
+    "target": "Storm_(Marvel_Comics)",
+    "match": "Wolverine_(character)",
+    "method": "embedding",
+    "score": 0.947278476341187,
+    "shared_terms": [
+      "men",
+      "wolverine",
+      "claremont",
+      "storm",
+      "cyclops",
+      "relationship"
+    ],
+    "excerpts_target": [
+      "X-Men, when T'Challa officially annuls their marriage, Storm returns to Wolverine's side and they both begin a relationship.",
+      "calling the obligation to wear clothing in public \"absurd.\" Claremont remained the main writer of X-Men for the next 16 years, and consequently wrote most of the publications containing Storm."
+    ],
+    "excerpts_match": [
+      "Since joining X-Men, Wolverine has built strong relationships with many of his teammates, being close friends with Nightcrawler, Colossus, and Storm, with whom he also has an on-again, off-again relationship.",
+      "He gained greater prominence as a standalone character when artist Frank Miller collaborated with Claremont on a four-issue eponymous limited series in 1982, which debuted the character's catchphrase: \"I'm the best there is at what I do, but what I do best isn't very nice.\" Since 1988, Wolverine has often been featured in ongoing, self-titled series, while also remaining a member of X-Men-related comics."
+    ]
+  },
+  {
+    "target": "Doctor_Strange",
+    "match": "Jericho_Drumm",
+    "method": "tfidf",
+    "score": 0.23918378942934224,
+    "shared_terms": [
+      "strange",
+      "doctor",
+      "sorcerer",
+      "agamotto",
+      "supreme",
+      "voodoo"
+    ],
+    "excerpts_target": [
+      "Jericho Drumm, now newly appointed Sorcerer Supreme Doctor Voodoo, sacrifices himself to stop the powerful mystical entity Agamotto from reclaiming the Eye.",
+      "Doctor Strange serves as the Sorcerer Supreme, the primary protector of the Earth dimension against magical and mystical threats."
+    ],
+    "excerpts_match": [
+      "Brother Voodoo's time spent as the new Sorcerer Supreme had bestowed upon him not only the power of the Eye of Agamotto, but also the Cloak of Levitation and the Books of Knowledge, which were formerly in the possession of Doctor Strange.",
+      "Since replacing Doctor Strange as Sorcerer Supreme in New Avengers #53 (July 2009), the character has been referred to as Doctor Voodoo, a title originally assumed by his evil twin brother Daniel, whose ghost he controls."
+    ]
+  },
+  {
+    "target": "Doctor_Strange",
+    "match": "Doctor_Druid",
+    "method": "embedding",
+    "score": 0.9605026202592649,
+    "shared_terms": [
+      "strange",
+      "doctor",
+      "dr",
+      "magic",
+      "sorcerer",
+      "ditko"
+    ],
+    "excerpts_target": [
+      "Sorcerer Supreme\n\nDoctor Strange is generally portrayed as the Sorcerer Supreme, a title denoting a specific magic-user who is given responsibility for protecting Earth and the known universe from both supernatural and magical threats.",
+      "Doctor Strange serves as the Sorcerer Supreme, the primary protector of the Earth dimension against magical and mystical threats."
+    ],
+    "excerpts_match": [
+      "According to the lore of Marvel Comics, this makes Druid a mystic but not a full sorcerer like Doctor Strange since he does not cast spells that alter the state of people or the environment around him and does not draw power from Earth's magical energy, extra-dimensional energy, or energy linked to magical entities.",
+      "Stan Lee changed the name to Doctor Strange and gave the character a new version of Dr."
+    ]
+  },
+  {
+    "target": "Wolverine_(character)",
+    "match": "Wolverine_(Ultimate_Marvel_character)",
+    "method": "tfidf",
+    "score": 0.7038958745435253,
+    "shared_terms": [
+      "wolverine",
+      "logan",
+      "men",
+      "sabretooth",
+      "adamantium",
+      "apocalypse"
+    ],
+    "excerpts_target": [
+      "He reprised the role in X2 (2003), X-Men: The Last Stand (2006), X-Men Origins: Wolverine (2009), X-Men: First Class (2011), The Wolverine (2013), X-Men: Days of Future Past (2014), X-Men: Apocalypse (2016), Logan (2017), and Deadpool & Wolverine (2024).",
+      "Wolverine's name was revealed as \"Logan\" in X-Men #103 (February 1977); Claremont drew inspiration from Canada's Mount Logan, liking \"the idea [of] the tallest mountain being the name of the shortest character\"."
+    ],
+    "excerpts_match": [
+      "Hulk and Wolverine exchange words, with Hulk belittling Wolverine's intelligence, and also revealed that Fury ordered the Ultimates to kill Logan if he ever abandons the X-Men.",
+      "Howlett known as Cable's life was identical to the present time Wolverine, until Apocalypse arrived and battled the X-Men."
+    ]
+  },
+  {
+    "target": "Wolverine_(character)",
+    "match": "Deadpool",
+    "method": "embedding",
+    "score": 0.9561023841696997,
+    "shared_terms": [
+      "wolverine",
+      "deadpool",
+      "men",
+      "written",
+      "healing",
+      "factor"
+    ],
+    "excerpts_target": [
+      "X-Men #116 (December 1978) first introduces Wolverine's healing factor, and issue #124 (August 1979) first suggests that he has a reinforced skeleton.",
+      "Wolverine leaves the X-Men for a time, embarking on a series of adventures during which his healing factor returns."
+    ],
+    "excerpts_match": [
+      "Deadpool is the persona of Wade Wilson, a disfigured Canadian mercenary who underwent an experimental procedure that grafted an artificial healing factor onto his cancer-ridden cells, granting him superhuman regenerative abilities at the cost of severe physical scarring and chronic mental instability.",
+      "In addition to his healing factor, Deadpool is a master assassin, an expert swordsman and marksman, and is fluent in multiple languages."
+    ]
+  },
+  {
+    "target": "Black_Widow_(Natasha_Romanova)",
+    "match": "Yelena_Belova",
+    "method": "tfidf",
+    "score": 0.3862763960599802,
+    "shared_terms": [
+      "widow",
+      "black",
+      "belova",
+      "natasha",
+      "yelena",
+      "romanova"
+    ],
+    "excerpts_target": [
+      "While tracking a biotoxin, Natasha comes into conflict with another Black Widow, Yelena Belova, and both try to prove themselves as worthy of the title.",
+      "She subsequently joins the intelligence agency S.H.I.E.L.D., partners with Daredevil, and encounters a rival Black Widow in Yelena Belova."
+    ],
+    "excerpts_match": [
+      "Trained as an assassin in the Russian-based Red Room, Belova became the second modern-era character to use the Black Widow moniker, after Natasha Romanova.",
+      "Belova was introduced as the second incarnation of the Black Widow after Natasha Romanova (Natasha Romanoff), her obsession turned rival."
+    ]
+  },
+  {
+    "target": "Black_Widow_(Natasha_Romanova)",
+    "match": "Sabra_(character)",
+    "method": "embedding",
+    "score": 0.9324759259854938,
+    "shared_terms": [
+      "widow",
+      "black",
+      "film",
+      "writer",
+      "red",
+      "room"
+    ],
+    "excerpts_target": [
+      "Black Widow stories often explore her struggle to define her own identity as a spy and the trauma she endured from her life of training in the Red Room.",
+      "Abilities and equipment\nBlack Widow was trained as a spy in the Red Room, and she possesses expert knowledge about the practice of espionage."
+    ],
+    "excerpts_match": [
+      "In the film, Bat-Seraph is a former Black Widow assassin who was trained in the Red Room, and is the head of security for President Thaddeus Ross.",
+      "Shira Haas portrayed a reimagined version of Bat-Seraph, a former Black Widow assassin, in the Marvel Cinematic Universe (MCU) film Captain America: Brave New World (2025), with her inclusion receiving polarizing responses."
+    ]
+  },
+  {
+    "target": "Spider-Man",
+    "match": "Spider-Man_Noir",
+    "method": "tfidf",
+    "score": 0.6469689108991513,
+    "shared_terms": [
+      "spider",
+      "man",
+      "peter",
+      "parker",
+      "noir",
+      "jane"
+    ],
+    "excerpts_target": [
+      "In the Marvel Comics 2 imprint, Peter marries Mary Jane and has a daughter named Mayday Parker, who carries on Spider-Man's legacy, while Marvel Noir has a 1930s version of Peter Parker.",
+      "Spider-Man's secret identity is Peter Benjamin Parker, who was raised by his Aunt May and Uncle Ben in Queens, New York City, after the death of his parents."
+    ],
+    "excerpts_match": [
+      "Spider-Man Noir (Peter Parker), often referred to as Spider-Noir, Spider-Man, or simply Noir, is a superhero appearing in American comic books published by Marvel Comics.",
+      "In contrast to the Peter Parker of mainstream Marvel continuity, Spider-Man Noir initially uses brutal and lethal force against his enemies and later struggles with the moral implications of this."
+    ]
+  },
+  {
+    "target": "Spider-Man",
+    "match": "Spider-Man_Noir",
+    "method": "embedding",
+    "score": 0.9613129807069387,
+    "shared_terms": [
+      "spider",
+      "man",
+      "peter",
+      "parker",
+      "noir",
+      "jane"
+    ],
+    "excerpts_target": [
+      "In the Marvel Comics 2 imprint, Peter marries Mary Jane and has a daughter named Mayday Parker, who carries on Spider-Man's legacy, while Marvel Noir has a 1930s version of Peter Parker.",
+      "Spider-Man's secret identity is Peter Benjamin Parker, who was raised by his Aunt May and Uncle Ben in Queens, New York City, after the death of his parents."
+    ],
+    "excerpts_match": [
+      "Spider-Man Noir (Peter Parker), often referred to as Spider-Noir, Spider-Man, or simply Noir, is a superhero appearing in American comic books published by Marvel Comics.",
+      "In contrast to the Peter Parker of mainstream Marvel continuity, Spider-Man Noir initially uses brutal and lethal force against his enemies and later struggles with the moral implications of this."
+    ]
+  }
+]

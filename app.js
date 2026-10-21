@@ -1,4 +1,4 @@
-const DATA_BASE = "https://sunelehmann.com/socialgraphs2026-web/data/";
+const DATA_BASE = "../../data/";
 const state = { characters: [], byName: new Map(), scale: "linear", selected: null };
 
 function parseTSV(text, hasHeader = true) {
