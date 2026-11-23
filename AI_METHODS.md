@@ -39,3 +39,30 @@ and added attributed source paraphrases to the four case discussions.
 The main overlap figure is calculated from the saved top-five sets for all
 303 characters: counts for overlaps 0–5 are 26, 69, 73, 85, 45 and 5.
 These checks are AI-assisted and do not imply student or group review.
+
+## Week 2 — Triangle shuffle test
+
+The user specified the question and degree-preserving comparison. The AI agent
+read official exercise 2.11 and the course data documentation, inspected the
+existing repository design, wrote and ran the analysis, and drafted the article.
+No measurements were copied from illustrative course clustering values.
+
+Executed checks:
+- Downloaded both official frozen TSVs and confirmed byte equality with the repo copies.
+- Kept all 303 node IDs before adding edges, including all 17 isolates.
+- Merged either directed link into one unweighted undirected edge (1,434 total).
+- Independently cross-checked 1,839 triangles via common-neighbour intersections.
+- Compared each character’s degree by ID after every shuffle, not merely the distribution.
+- Checked exact node set, edge count, no self-loops/multiedges and isolate IDs in 600 runs.
+- Used reproducible, distinct seeds and fresh graph copies; saved all counts/seeds and hashes.
+- Compared the primary 20m-swap ensemble with 100m-swap sensitivity runs.
+- Checked the figure and article against saved results. The one-sided p-value uses
+  the plus-one correction; it is not reported as zero or as the probability of the null.
+
+Run with `pip install -r scripts/requirements-week2.txt` then
+`python scripts/analyse_week2.py` from the repository root. See README for an
+isolated output directory. The AI-assisted audit is not independent human review.
+Students should inspect the plot, understand why direction is discarded and why
+fixed degrees answer this question, and review the conclusion before presenting.
+The result cannot establish friendship, causality or exact convergence of the
+finite swap chains. No Teams message or peer feedback was sent by the agent.

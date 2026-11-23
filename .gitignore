@@ -1,3 +1,5 @@
 __pycache__/
 .venv/
 data/marvel_pages.zip
+
+.venv-week2/
