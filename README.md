@@ -41,7 +41,8 @@ python3 analysis.py
 The root homepage now links to eight weekly subsections. Week 1's original post is
 preserved at `weeks/week1/`. Week 6's **Marvel Matchmaker** is at `weeks/week6/`.
 Week 2’s triangle shuffle test is published at `weeks/week2/`.
-Weeks 3–5 and 7–8 remain unpublished placeholders.
+Week 3’s fixed-ranking removal experiment is published at `weeks/week3/`.
+Weeks 4–5 and 7–8 remain unpublished placeholders.
 
 Week 6 compares TF-IDF document similarity, TF-IDF-weighted Word2Vec document
 vectors, and Wikipedia link neighbors. It includes a browser explorer, aggregate
@@ -97,3 +98,26 @@ and do not claim exact null sampling or infer causality from the result.
 
 Publishing uses the existing GitHub Pages build from `main`; no new hosting or
 workflow is required. After pushing, verify the Week 2 page, SVG and homepage card.
+
+## Week 3 — Hubs or bridges?
+
+Exercise 3.12: compare fixed degree-first and exact betweenness-first removals on
+the same full undirected Marvel graph (303 nodes, 1,434 edges; initial LCC 277).
+Both rankings are computed once, with node-ID alphabetical tie-breaking.
+Random baseline: 200 permutations, seeds 20261123–20261322.
+At 100 removals the LCC is 77 (degree), 58 (betweenness), 178.27 (random mean).
+The targeted curves cross: betweenness does not dominate at every count.
+Rockman’s frozen links explain his degree rank 256 versus betweenness rank 59.
+
+```bash
+pip install -r scripts/requirements-week3.txt
+python scripts/analyse_week3.py
+python scripts/analyse_week3.py --output-dir /tmp/week3-check
+```
+
+Outputs under `weeks/week3/`: SVG/PNG chart, rankings CSV, removal-curves CSV,
+and results.json (all 200 random curves, orders, input hashes, software versions).
+The script checks input hashes/counts, monotonicity, remaining-node bounds and
+Rockman’s links; an independent BFS checks both orders at nine cut points.
+The static article must be reconciled if parameters change. Publish through
+the existing GitHub Pages main-branch deployment. No Teams post is sent.

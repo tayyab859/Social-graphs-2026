@@ -66,3 +66,24 @@ Students should inspect the plot, understand why direction is discarded and why
 fixed degrees answer this question, and review the conclusion before presenting.
 The result cannot establish friendship, causality or exact convergence of the
 finite swap chains. No Teams message or peer feedback was sent by the agent.
+
+## Week 3 — Fixed-ranking removal comparison
+
+The user specified the question, equal-removal comparison, frozen rankings,
+random baseline, and a character-level link inspection. The agent read official
+exercise 3.12 and the data documentation, matched the existing site design,
+wrote and executed scripts/analyse_week3.py, and drafted the explanation.
+
+Verification: official TSV downloads matched the committed files byte-for-byte.
+All 303 nodes and 17 isolates were retained; the undirected graph has 1,434 edges.
+Exact normalized betweenness and degree use the same graph, ranked before removal
+with deterministic alphabetical tie-breaking. Each run starts from a fresh copy.
+200 random permutations use seeds 20261123–20261322. Independent BFS checks both
+attack curves at nine cuts. Bounds, monotonicity and input hashes are asserted.
+Rockman’s complete original incident edge list and The Witness’s degree-one
+attachment were inspected and saved; no fictional friendship interpretation was
+inferred. The script was rerun in an isolated output directory and outputs compared.
+The plot uses a pointwise random variability band, not a mean confidence interval.
+The text acknowledges crossing curves and the limitations of fixed rankings,
+undirected links, and a single editorial snapshot. These checks are AI-assisted;
+they do not imply student review. No Teams post or peer feedback was sent.
