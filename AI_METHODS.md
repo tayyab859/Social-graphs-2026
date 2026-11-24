@@ -150,3 +150,30 @@ not claim that curve appearance proves Zipf, that every compound is a name, or
 that vocabulary rarity measures semantic richness. No student review, independent
 human audit, Teams submission or peer feedback is claimed. Existing weeks remain
 unchanged apart from the Week 5 homepage status and the documentation additions.
+
+
+## Week 7 — Co-occurrence windows
+
+The user specified the question and requested publication. The agent read exercise
+7.13, inspected the current site and frozen corpus, and replaced the earlier
+12-name pilot with a new full-roster comparison. All measurements were executed.
+Same dictionary and same 303 nodes in both networks; only the window changes.
+Computed 1,284 sentence edges and 6,432 article edges.
+
+Checks actually run: archive hash and exact 303-page/roster identity; no unknown
+endpoints or self-loops; sentence-edge containment; exact passage offsets; an
+independent re-split/rematch across every article for three selected article-only
+pairs; alias deduplication and a non-word-boundary fixture; two sensitivity runs
+(no aliases and no Storm surface); isolated output reproduction; SVG rendering/visual inspection and local resource/HTML checks. Browser layout
+testing was blocked by Chromium socket restrictions. Two top article-only pairs with multiword, non-abbreviated title stems (excluding
+the Ultimate Iron Man entry), plus the top overall pair as an error diagnostic,
+were inspected with alphabetical ties and first supporting page; these
+are selected cases, not a random precision/recall audit. Frozen Surge and Storm
+passages illustrate ordinary-word ambiguity and alias mapping.
+
+The matcher omits colliding shortened names, retains their nodes, and keeps a
+small explicit alias map. It does not resolve all identities, alternate universes,
+pronouns, titles or surnames. Removing Storm also removes true positives; that
+check is not an error-rate estimate. No trained NER, human gold standard, student
+review, statistical significance or friendship claim is made. AI assisted code,
+source checking and prose. No Teams message or peer feedback was sent.

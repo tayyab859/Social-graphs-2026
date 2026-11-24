@@ -44,7 +44,8 @@ Week 2’s triangle shuffle test is published at `weeks/week2/`.
 Week 3’s fixed-ranking removal experiment is published at `weeks/week3/`.
 Week 4’s weighted-versus-unweighted philosopher comparison is published at `weeks/week4/`.
 Week 5’s hyphen-tokenization comparison is published at `weeks/week5/`.
-Weeks 7–8 remain unpublished placeholders.
+Week 7’s sentence-versus-article comparison is published at `weeks/week7/`.
+Week 8 remains an unpublished placeholder.
 
 Week 6 compares TF-IDF document similarity, TF-IDF-weighted Word2Vec document
 vectors, and Wikipedia link neighbors. It includes a browser explorer, aggregate
@@ -187,3 +188,28 @@ articles and preserve frozen-text offsets in results.json. All text is attribute
 to Wikipedia contributors; the full archive is not committed.
 Publish through existing GitHub Pages from main. Teams posting/peer feedback are
 separate; the agent did not send messages to classmates.
+
+
+## Week 7 — A sentence or a whole story?
+
+Exercise 7.13: same 303 frozen articles and roster nodes, same case-insensitive
+longest-first dictionary matcher, two co-occurrence windows. Unique shortened
+roster titles plus three explicit aliases; colliding title stems are omitted.
+All nodes remain, including unmatched nodes. Main results: 1,284 sentence
+edges, 6,432 article edges, 5,148 article-only additions.
+This is a mention network, not fully resolved character identities.
+
+```bash
+pip install -r scripts/requirements-week7.txt
+python scripts/analyse_week7.py
+python scripts/analyse_week7.py --output-dir /tmp/week7-check
+```
+
+Outputs: results.json (metrics, checks, input hashes, aliases and source offsets),
+edges.csv, matching_rules.csv and window-comparison.svg in weeks/week7/.
+Only matplotlib 3.10.8 is required beyond Python's standard library. The archive
+is downloaded if missing, with a fixed hash assertion. The script records Python
+version. A second run reproduced all saved outputs. Reconcile static HTML numbers
+when changing rules. The article includes three inspected added-pair cases, two
+verifiable source examples and no-alias/Storm-exclusion sensitivity comparisons.
+Publish through the existing main-branch GitHub Pages deployment.
