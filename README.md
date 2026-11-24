@@ -43,7 +43,8 @@ preserved at `weeks/week1/`. Week 6's **Marvel Matchmaker** is at `weeks/week6/`
 Week 2’s triangle shuffle test is published at `weeks/week2/`.
 Week 3’s fixed-ranking removal experiment is published at `weeks/week3/`.
 Week 4’s weighted-versus-unweighted philosopher comparison is published at `weeks/week4/`.
-Weeks 5 and 7–8 remain unpublished placeholders.
+Week 5’s hyphen-tokenization comparison is published at `weeks/week5/`.
+Weeks 7–8 remain unpublished placeholders.
 
 Week 6 compares TF-IDF document similarity, TF-IDF-weighted Word2Vec document
 vectors, and Wikipedia link neighbors. It includes a browser explorer, aggregate
@@ -154,3 +155,35 @@ sums, partition coverage, overlap totals, and NMI via an independent calculation
 The static page matches these saved outputs; reconcile it if rerunning with changes.
 Use the existing GitHub Pages deployment from main, then verify the page, figure
 and homepage card. No Teams message or peer feedback is sent.
+
+
+## Week 5 — A small hyphen, a different vocabulary
+
+Exercise 5.9: compare the same 303 frozen Marvel articles with internal ASCII
+hyphens retained versus split. Only the hyphen rule changes. Both use Python
+Unicode word characters excluding digits/underscore, lowercase, retain single
+letters and stopwords, and do no lemmatization. Other punctuation is a boundary.
+Keep: 27,711 types, 10,621 hapax (38.33%). Split: 25,302 types, 8,741 hapax (34.55%).
+The reduction is 1,880 hapax (17.70%), or 3.78 percentage points of vocabulary.
+
+```bash
+python3 -m venv .venv-week5
+source .venv-week5/bin/activate
+pip install -r scripts/requirements-week5.txt
+python scripts/analyse_week5.py
+python scripts/analyse_week5.py --output-dir /tmp/week5-check
+```
+
+The script downloads `data/marvel_pages.zip` when missing and enforces SHA-256
+`36023ca077053b3df5bd55630754cb514c3f9dbecbd70afcb2283e5bcc0017ee`.
+Source: https://sunelehmann.com/socialgraphs2026-web/data/marvel_pages.zip
+Snapshot: 2026-08-26. All 303 decoded IDs are checked against the node TSV.
+Outputs under `weeks/week5/`: results.json, both ranked frequency CSVs,
+hyphen_audit.csv, document_counts.csv, and rank-frequency.svg/.png.
+An isolated rerun reproduces outputs; the article is static and must be updated
+if rules change. Both curves have separate ranks, raw counts and log-log axes;
+no exact Zipf fit or significance claim is made. Passage examples link to source
+articles and preserve frozen-text offsets in results.json. All text is attributed
+to Wikipedia contributors; the full archive is not committed.
+Publish through existing GitHub Pages from main. Teams posting/peer feedback are
+separate; the agent did not send messages to classmates.

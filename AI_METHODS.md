@@ -124,3 +124,29 @@ and influence. NMI is not a percentage correct; reused pairwise comparisons are 
 independent samples; modularity scores from different weighting objectives are not
 ranked against each other. No random-graph null, causal edge ablation, ground-truth
 school validation, student review or Teams submission is claimed.
+
+
+## Week 5 — Hyphens and rare-word counts
+
+The user supplied the research question and requested publication. The agent read
+exercise 5.9 and the official data documentation, inspected existing styles, and
+ran a new analysis on all 303 articles. Only ASCII internal-hyphen handling differs;
+shared case normalization, punctuation boundaries and no stopword/lemma filtering
+are explicit. Archive hash and software versions are recorded in results.json.
+
+Checks compare the exact split-token sequence in every document with the kept
+sequence split on hyphens, rebuild the aggregate counter from kept-type counts,
+verify node-ID coverage and the additional-token identity, and reconcile hapax
+losses/gains (1,952 compound losses + 167 promoted singleton words − 239 new
+singleton pieces = 1,880 fewer hapax). An isolated rerun is compared with saved
+outputs. The rank-frequency figure was visually inspected. Source passages for
+Spider-Man, X-Men and A-Bomb were read in the archive and their character offsets
+and component counts preserved. Cases are selected illustrations, not a random
+sample or human-labelled validation. The rare example is selected alphabetically
+among hyphenated hapax shorter than 26 characters whose split parts all recur.
+
+The agent wrote the article and checked its links and numerical claims. It does
+not claim that curve appearance proves Zipf, that every compound is a name, or
+that vocabulary rarity measures semantic richness. No student review, independent
+human audit, Teams submission or peer feedback is claimed. Existing weeks remain
+unchanged apart from the Week 5 homepage status and the documentation additions.
