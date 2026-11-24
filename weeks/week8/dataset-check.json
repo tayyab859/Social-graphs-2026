@@ -1,0 +1,35 @@
+{
+  "scope": "Frozen philosophers TSV feasibility check only; no communities or TF-IDF computed",
+  "snapshot_date": "2026-09-15",
+  "node_rows": 1444,
+  "unique_node_ids": 1444,
+  "directed_edge_rows": 11135,
+  "unknown_edge_endpoints": [],
+  "duplicate_directed_edges": 0,
+  "self_loops": 0,
+  "nodes_without_incident_edges": 68,
+  "nonempty_descriptions": 1444,
+  "nonempty_era_labels": 1444,
+  "description_word_count": {
+    "min": 6,
+    "median": 17.0,
+    "max": 56
+  },
+  "word_count_rule": "Unicode alphabetic runs; digits and underscores excluded; hyphens split",
+  "examples": [
+    {
+      "node_id": "Abhinavagupta",
+      "description": "Abhinavagupta was a philosopher, mystic and aesthetician from Kashmir.",
+      "era": "1st through 10th centuries"
+    },
+    {
+      "node_id": "Abraham_Tucker",
+      "description": "Abraham Tucker was an English country gentleman, who devoted himself to the study of philosophy.",
+      "era": "18th century"
+    }
+  ],
+  "sha256": {
+    "week4_philosophers_nodes.tsv": "c5bd92ba8319fed505cc1fa67f02fb3c62691595175c55abed2144140cfaac45",
+    "week4_philosophers_edges.tsv": "ddc0cac2c763e6ade9acb336ffb391af43952a0c0fc75c4c370bd593b16e438b"
+  }
+}
