@@ -42,7 +42,8 @@ The root homepage now links to eight weekly subsections. Week 1's original post 
 preserved at `weeks/week1/`. Week 6's **Marvel Matchmaker** is at `weeks/week6/`.
 Week 2’s triangle shuffle test is published at `weeks/week2/`.
 Week 3’s fixed-ranking removal experiment is published at `weeks/week3/`.
-Weeks 4–5 and 7–8 remain unpublished placeholders.
+Week 4’s weighted-versus-unweighted philosopher comparison is published at `weeks/week4/`.
+Weeks 5 and 7–8 remain unpublished placeholders.
 
 Week 6 compares TF-IDF document similarity, TF-IDF-weighted Word2Vec document
 vectors, and Wikipedia link neighbors. It includes a browser explorer, aggregate
@@ -121,3 +122,35 @@ The script checks input hashes/counts, monotonicity, remaining-node bounds and
 Rockman’s links; an independent BFS checks both orders at nine cut points.
 The static article must be reconciled if parameters change. Publish through
 the existing GitHub Pages main-branch deployment. No Teams post is sent.
+
+## Week 4 — One link or twenty-four?
+
+Exercise 4.13: do repeated Wikipedia links change philosophers’ communities?
+Uses the official frozen 2026-09-15 philosopher node/weighted-edge TSVs committed
+under `data/week4/`. Directions are summed, then the same giant component is
+used for both treatments: 1,374 nodes, 9,139 edges, total weight 15,757.
+The same 68 isolates and separate two-node component are excluded from both.
+
+```bash
+python3 -m venv .venv-week4
+source .venv-week4/bin/activate
+pip install -r scripts/requirements-week4.txt
+python scripts/analyse_week4.py
+python scripts/analyse_week4.py --output-dir /tmp/week4-check
+```
+
+Louvain runs at resolution 1 with seeds 0–19, weight=None versus weight="weight".
+Mean NMI: 0.658 across all 400 cross-treatment pairs, versus 0.720/0.756 across
+different seeds within unweighted/weighted runs. The reused pairs are descriptive,
+not independent observations. Seed 0 is fixed for the overlap figure (NMI 0.637).
+Erasmus–More has weight 24 (18+6) and co-membership 5/20 unweighted versus 20/20
+weighted. This is an exploratory selected case, not a causal single-edge test.
+
+Outputs in `weeks/week4/`: SVG/PNG overlap figure, results.json with all 40 labelings,
+community_overlap.csv, memberships.csv, seed_agreement.csv and case_links.csv.
+The graph’s edges and node order are identical between treatments; software versions
+and SHA-256 hashes are saved. The script validates hashes, counts, directed-weight
+sums, partition coverage, overlap totals, and NMI via an independent calculation.
+The static page matches these saved outputs; reconcile it if rerunning with changes.
+Use the existing GitHub Pages deployment from main, then verify the page, figure
+and homepage card. No Teams message or peer feedback is sent.

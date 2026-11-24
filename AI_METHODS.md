@@ -87,3 +87,40 @@ The plot uses a pointwise random variability band, not a mean confidence interva
 The text acknowledges crossing curves and the limitations of fixed rankings,
 undirected links, and a single editorial snapshot. These checks are AI-assisted;
 they do not imply student review. No Teams post or peer feedback was sent.
+
+## Week 4 — Repeated links and philosopher communities
+
+The user specified a weighted/unweighted Louvain question, repeated seeds, NMI, an
+overlap figure and a link-level case inspection. The agent read official exercise
+4.13 and the data documentation, reused the earlier communities/weights theme,
+and performed a new executed comparison. Previous course-reference numbers were
+not substituted for computed measurements. The existing site styles/navigation
+were reused; other weeks were preserved.
+
+The frozen 2026-09-15 inputs are saved with their provenance headers. Every directed
+weight is positive and integral; reciprocal counts are summed and checked against
+the original directed lookup. The largest component is selected once and both
+treatments use the same node order, node set and edge set (1,374 / 9,139). Forty
+partitions use seeds 0–19, resolution 1, explicit weight=None or weight="weight".
+All labels and parameters are preserved. NMI uses arithmetic normalization.
+An independent contingency-table calculation checks the seed-0 NMI; overlap
+row/column counts and full partition coverage are validated. A second isolated
+execution matches results, CSVs and the deterministic SVG.
+
+The figure uses seed 0 by convention, with communities ordered by size and labelled
+by a high-degree anchor, not asserted historical school names. Labels are arbitrary;
+maximum-overlap matching is used only to screen case candidates, not to compute NMI.
+Among the 30 highest-degree reference mismatches, Erasmus has the largest repeated
+edge and was selected descriptively. All 51 incident edges were inspected/saved,
+including original directions, summed weights and pairwise co-membership frequencies.
+Erasmus→More is 18 and More→Erasmus is 6; they group together in 5/20 unweighted
+and 20/20 weighted runs. The article also reports Erasmus–Luther’s 19/20 weighted
+co-membership rather than presenting the illustrative seed’s separation as stable.
+
+The agent visually inspected the generated figure and checked local links, article
+values and output consistency. These are AI-assisted checks, not human validation.
+Repeated hyperlinks are explicitly distinguished from mentions, citations, agreement
+and influence. NMI is not a percentage correct; reused pairwise comparisons are not
+independent samples; modularity scores from different weighting objectives are not
+ranked against each other. No random-graph null, causal edge ablation, ground-truth
+school validation, student review or Teams submission is claimed.

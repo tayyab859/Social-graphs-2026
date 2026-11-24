@@ -1,0 +1,52 @@
+neighbor_id,neighbor,outgoing,incoming,weight,unweighted_seed0,weighted_seed0,same_unweighted_runs,same_weighted_runs
+Thomas_More,Thomas More,18,6,24,0,0,5,20
+Lorenzo_Valla,Lorenzo Valla,5,3,8,1,0,18,20
+Martin_Luther,Martin Luther,6,1,7,1,4,20,19
+Cicero,Cicero,4,2,6,3,0,0,2
+Juan_Luis_Vives,Juan Luis Vives,3,3,6,3,0,18,20
+Philipp_Melanchthon,Philipp Melanchthon,5,1,6,1,4,19,19
+Augustine_of_Hippo,Augustine of Hippo,5,0,5,1,4,20,18
+Origen,Origen,4,1,5,1,0,8,4
+François_Rabelais,François Rabelais,1,3,4,1,0,11,19
+Jean_Gerson,Jean Gerson,4,0,4,1,0,20,20
+Thomas_Aquinas,Thomas Aquinas,4,0,4,1,4,20,16
+John_Calvin,John Calvin,2,1,3,1,4,20,19
+Lucian,Lucian,2,1,3,3,0,0,2
+Rodolphus_Agricola,Rodolphus Agricola,1,2,3,1,0,13,11
+Thomas_Cajetan,Thomas Cajetan,3,0,3,1,4,20,16
+Ambrose,Ambrose,0,2,2,1,4,18,18
+Duns_Scotus,Duns Scotus,2,0,2,1,4,20,18
+Giordano_Bruno,Giordano Bruno,0,2,2,5,0,5,6
+John_Major_(philosopher),John Major (philosopher),0,2,2,1,4,20,16
+John_Wycliffe,John Wycliffe,1,1,2,1,4,20,19
+Michel_de_Montaigne,Michel de Montaigne,0,2,2,3,0,0,4
+Niccolò_Machiavelli,Niccolò Machiavelli,1,1,2,2,2,0,0
+Paracelsus,Paracelsus,0,2,2,5,0,4,4
+Petrarch,Petrarch,2,0,2,1,0,11,14
+Plutarch,Plutarch,2,0,2,3,0,0,2
+Seneca_the_Younger,Seneca the Younger,1,1,2,3,0,0,3
+Thomas_à_Kempis,Thomas à Kempis,1,1,2,1,0,19,20
+Alexander_of_Hales,Alexander of Hales,1,0,1,1,4,20,18
+Aristotle,Aristotle,1,0,1,3,0,6,4
+Bernard_Mandeville,Bernard Mandeville,0,1,1,2,2,0,0
+Bonaventure,Bonaventure,1,0,1,1,4,20,18
+Francis_of_Assisi,Francis of Assisi,1,0,1,0,4,18,18
+Francisco_de_Vitoria,Francisco de Vitoria,0,1,1,1,2,20,4
+Gabriel_Biel,Gabriel Biel,1,0,1,1,4,20,18
+Giovanni_Pico_della_Mirandola,Giovanni Pico della Mirandola,1,0,1,1,0,12,6
+Henri-Frédéric_Amiel,Henri-Frédéric Amiel,0,1,1,1,0,6,18
+Isocrates,Isocrates,1,0,1,3,0,0,2
+Jean_Le_Clerc_(theologian),Jean Le Clerc (theologian),0,1,1,2,2,0,0
+Jesus,Jesus,0,1,1,1,0,19,14
+John_Henry_Newman,John Henry Newman,1,0,1,1,0,15,18
+John_of_Salisbury,John of Salisbury,1,0,1,1,4,20,18
+Julius_Caesar_Scaliger,Julius Caesar Scaliger,0,1,1,5,0,5,4
+Karl_Barth,Karl Barth,1,0,1,0,1,0,0
+Leon_Battista_Alberti,Leon Battista Alberti,0,1,1,1,0,12,8
+Manuel_Chrysoloras,Manuel Chrysoloras,0,1,1,3,0,4,4
+Nicholas_of_Autrecourt,Nicholas of Autrecourt,1,0,1,7,6,9,4
+Plato,Plato,1,0,1,3,0,0,2
+Pseudo-Dionysius_the_Areopagite,Pseudo-Dionysius the Areopagite,0,1,1,1,4,20,17
+Ptolemy,Ptolemy,1,0,1,3,0,6,6
+Socrates,Socrates,1,0,1,3,0,0,2
+Tertullian,Tertullian,1,0,1,3,0,0,3
