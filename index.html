@@ -1,1 +1,133 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Social Graphs and Interactions: reproducible weekly investigations of networks and language."><title>Networks meet language · LINK//MIRROR</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="course.css?v=2"></head><body><header class="site-header"><a class="brand" href="index.html">LINK//MIRROR</a><nav aria-label="Weekly navigation"><a href="weeks/week1/">1</a><a href="weeks/week2/">2</a><a href="weeks/week3/">3</a><a href="weeks/week4/">4</a><a href="weeks/week5/">5</a><a href="weeks/week6/">6</a><a href="weeks/week7/">7</a><a href="weeks/week8/">8</a></nav></header><main><section class="hero"><p class="eyebrow">Social Graphs and Interactions · 2026</p><h1>Networks meet<br><em>language.</em></h1><p class="lede">Eight weeks. One place to ask questions, inspect evidence, and explore what our models actually measure.</p><a class="button" href="weeks/week6/">Explore Week 6 →</a></section><section class="week-grid"><a class="week-card ready" href="weeks/week1/"><span class="eyebrow">Week 01 · Published</span><h2>Networks</h2><p>Who links back? Explore reciprocal and one-way Wikipedia links.</p><span>Open week →</span></a><a class="week-card ready" href="weeks/week2/"><span class="eyebrow">Week 02 · Published</span><h2>Models and Null Models</h2><p>Triangles beyond the hubs: compare Marvel with 500 degree-preserving shuffles.</p><span>Read the triangle test →</span></a><a class="week-card ready" href="weeks/week3/"><span class="eyebrow">Week 03 · Published</span><h2>Who Matters, and Why</h2><p>Hubs or bridges? Remove Marvel characters by degree, betweenness, or chance.</p><span>Compare the removal orders →</span></a><a class="week-card ready" href="weeks/week4/"><span class="eyebrow">Week 04 · Published</span><h2>Communities and Backbones</h2><p>One link or twenty-four? Test how repeated hyperlinks reshape philosopher communities.</p><span>Compare weighted communities →</span></a><a class="week-card ready" href="weeks/week5/"><span class="eyebrow">Week 05 · Published</span><h2>NLP I</h2><p>A small hyphen, a different vocabulary: 1,880 fewer once-only types when compounds split.</p><span>Inspect the word counts →</span></a><a class="week-card ready" href="weeks/week6/"><span class="eyebrow">Week 06 · Published</span><h2>NLP II — From counts to meaning</h2><p>Marvel Matchmaker: shared words, learned contexts, or Wikipedia links?</p><span>Open week →</span></a><a class="week-card ready" href="weeks/week7/"><span class="eyebrow">Week 07 · Published</span><h2>NLP III</h2><p>A sentence or a whole story? Article-wide matching adds 5,148 Marvel connections.</p><span>Inspect the source passages →</span></a><a class="week-card ready" href="weeks/week8/"><span class="eyebrow">Week 08 · Preparation recap</span><h2>Networks × Language</h2><p>A philosopher project candidate: checked data, one shared question, and a validation plan.</p><span>Read the project recap →</span></a></section></main><footer><p>Muhammad Tayyab · DTU 02805 · <a href="AI_METHODS.md">AI methods</a> · <a href="https://github.com/tayyab859/Social-graphs-2026">Source code ↗</a></p></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Eight projects and investigations from DTU’s Social Graphs and Interactions course, covering networks, language, and their overlap.">
+  <title>Networks meet language · LINK//MIRROR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="course.css?v=4">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="LINK//MIRROR home"><span class="brand-mark" aria-hidden="true"></span><span>LINK<span class="brand-accent">//</span>MIRROR</span></a>
+      <nav class="week-nav" aria-label="Weekly navigation">
+        <a class="week-nav-home" href="./" aria-current="page">All weeks</a>
+        <a href="weeks/week1/" aria-label="Week 1">01</a>
+        <a href="weeks/week2/" aria-label="Week 2">02</a>
+        <a href="weeks/week3/" aria-label="Week 3">03</a>
+        <a href="weeks/week4/" aria-label="Week 4">04</a>
+        <a href="weeks/week5/" aria-label="Week 5">05</a>
+        <a href="weeks/week6/" aria-label="Week 6">06</a>
+        <a href="weeks/week7/" aria-label="Week 7">07</a>
+        <a href="weeks/week8/" aria-label="Week 8 project preparation">08</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <section class="hero home-hero">
+      <div>
+        <p class="eyebrow">DTU 02805 · Social Graphs and Interactions</p>
+        <h1>Networks meet<br><em>language.</em></h1>
+        <p class="lede">Eight weeks of exploring what Wikipedia links and article text reveal about Marvel characters and philosophers.</p>
+        <div class="hero-actions">
+          <a class="button" href="#weekly-work">Browse the weeks <span aria-hidden="true">↓</span></a>
+          <a class="button-secondary" href="weeks/week6/#explorer">Try the Marvel Matchmaker <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <nav class="course-map" aria-label="Browse by topic">
+        <p class="eyebrow">Course map</p>
+        <a href="#network-studies"><small>Weeks 01–04</small><strong>Network analysis</strong><span class="map-arrow" aria-hidden="true">↓</span></a>
+        <a href="#language-studies"><small>Weeks 05–07</small><strong>Language analysis</strong><span class="map-arrow" aria-hidden="true">↓</span></a>
+        <a href="weeks/week8/"><small>Week 08</small><strong>Project preparation</strong><span class="map-arrow" aria-hidden="true">→</span></a>
+      </nav>
+    </section>
+
+    <section class="weekly-archive" id="weekly-work" aria-labelledby="weekly-heading">
+      <h2 id="weekly-heading">Weekly work</h2>
+      <section class="week-chapter" id="network-studies" aria-labelledby="network-heading">
+        <h3 class="chapter-heading" id="network-heading">Network analysis</h3>
+        <div class="week-grid">
+          <a class="week-card" href="weeks/week1/">
+            <span class="eyebrow">Week 01 · Networks</span>
+            <h4>Who links back?</h4>
+            <p>Explore reciprocity and one-way attention in Marvel’s Wikipedia links.</p>
+            <span class="card-link">Read the post <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="week-card" href="weeks/week2/">
+            <span class="eyebrow">Week 02 · Models and Null Models</span>
+            <h4>Triangles beyond the hubs</h4>
+            <p>Compare Marvel’s triangle count with 500 degree-preserving shuffles.</p>
+            <span class="card-link">Read the post <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="week-card" href="weeks/week3/">
+            <span class="eyebrow">Week 03 · Who Matters, and Why</span>
+            <h4>Hubs or bridges?</h4>
+            <p>Compare what happens when Marvel characters are removed by degree, betweenness, or chance.</p>
+            <span class="card-link">Read the post <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="week-card" href="weeks/week4/">
+            <span class="eyebrow">Week 04 · Communities and Backbones</span>
+            <h4>One link or twenty-four?</h4>
+            <p>See how repeated Wikipedia links change philosopher communities.</p>
+            <span class="card-link">Read the post <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+      <section class="week-chapter language-chapter" id="language-studies" aria-labelledby="language-heading">
+        <h3 class="chapter-heading" id="language-heading">Language and project preparation</h3>
+        <div class="week-grid">
+          <a class="week-card" href="weeks/week5/">
+            <span class="eyebrow">Week 05 · NLP I</span>
+            <h4>A small hyphen, a different vocabulary</h4>
+            <p>See why splitting hyphenated names yields 1,880 fewer once-only word types.</p>
+            <span class="card-link">Read the post <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="week-card" href="weeks/week6/">
+            <span class="eyebrow">Week 06 · NLP II</span>
+            <h4>Marvel Matchmaker</h4>
+            <p>Compare the results of three ways to find similar Marvel characters.</p>
+            <span class="card-link">Read the post <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="week-card" href="weeks/week7/">
+            <span class="eyebrow">Week 07 · NLP III</span>
+            <h4>A sentence or a whole story?</h4>
+            <p>Expanding the matching window to an entire article adds 5,148 Marvel connections.</p>
+            <span class="card-link">Read the post <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="week-card" href="weeks/week8/">
+            <span class="eyebrow">Week 08 · Networks × Language</span>
+            <h4>Project preparation</h4>
+            <p>Explore a dataset check and validation plan for a philosopher-project candidate.</p>
+            <span class="card-link">Read the recap <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a class="brand" href="./" aria-label="LINK//MIRROR home">LINK<span class="brand-accent">//</span>MIRROR</a>
+      <p>Social Graphs and Interactions<br>DTU 02805 · Fall 2026</p>
+    </div>
+    <div>
+      <p class="footer-heading">Group members</p>
+      <ul class="member-list">
+        <li><span class="member-name">Muhammad Tayyab</span> <span class="student-id">s252771</span></li>
+        <li><span class="member-name">Nirudh Balan</span> <span class="student-id">s252604</span></li>
+      </ul>
+    </div>
+    <nav class="footer-links" aria-label="Course resources">
+      <a href="https://sunelehmann.com/socialgraphs2026-web/data/">Course data</a>
+      <a href="AI_METHODS.md">AI methods</a>
+      <a href="https://github.com/tayyab859/Social-graphs-2026">Source code <span aria-hidden="true">↗</span></a>
+    </nav>
+  </footer>
+</body>
+</html>

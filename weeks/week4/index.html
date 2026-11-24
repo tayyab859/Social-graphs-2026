@@ -2,10 +2,30 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Do repeated Wikipedia links change philosophers’ communities? Forty Louvain runs, an overlap figure, and an Erasmus link audit using the frozen course dataset.">
 <title>One link or twenty-four? · Week 4 · LINK//MIRROR</title>
-<link rel="stylesheet" href="../../styles.css"><link rel="stylesheet" href="../../course.css?v=2">
-<style>.hero h1{font-size:clamp(3rem,8vw,7rem)}.prose{padding:3rem 0}.result-figure{margin:1.5rem 0}.figure-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px}.result-figure img{display:block;width:100%;height:auto;min-width:760px}figcaption{color:var(--muted);max-width:960px;margin-top:1rem}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{padding:.8rem;text-align:left;border-bottom:1px solid var(--line)}th{color:var(--text)}.callout{padding:1.5rem;border-left:3px solid var(--cyan);background:var(--panel)}nav a[aria-current]{color:var(--cyan)}details{margin:1.4rem 0}summary{cursor:pointer;color:var(--cyan)}.downloads{display:flex;gap:1rem;flex-wrap:wrap}@media(max-width:600px){.metrics{grid-template-columns:repeat(2,1fr)}th,td{padding:.55rem}}</style></head>
-<body><header class="site-header"><a class="brand" href="../../index.html">LINK//MIRROR</a><nav aria-label="Weekly navigation"><a href="../../weeks/week1/">1</a><a href="../../weeks/week2/">2</a><a href="../../weeks/week3/">3</a><a href="../../weeks/week4/" aria-current="page">4</a><a href="../../weeks/week5/">5</a><a href="../../weeks/week6/">6</a><a href="../../weeks/week7/">7</a><a href="../../weeks/week8/">8</a></nav></header>
-<main><section class="hero"><p class="eyebrow">Week 04 · Communities &amp; backbones · Go Nuts</p>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="../../styles.css?v=4">
+  <link rel="stylesheet" href="../../course.css?v=4"></head>
+<body><a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../" aria-label="LINK//MIRROR home"><span class="brand-mark" aria-hidden="true"></span><span>LINK<span class="brand-accent">//</span>MIRROR</span></a>
+      <nav class="week-nav" aria-label="Weekly navigation">
+        <a class="week-nav-home" href="../../">All weeks</a>
+        <a href="../../weeks/week1/" aria-label="Week 1">01</a>
+        <a href="../../weeks/week2/" aria-label="Week 2">02</a>
+        <a href="../../weeks/week3/" aria-label="Week 3">03</a>
+        <a href="../../weeks/week4/" aria-label="Week 4" aria-current="page">04</a>
+        <a href="../../weeks/week5/" aria-label="Week 5">05</a>
+        <a href="../../weeks/week6/" aria-label="Week 6">06</a>
+        <a href="../../weeks/week7/" aria-label="Week 7">07</a>
+        <a href="../../weeks/week8/" aria-label="Week 8 project preparation">08</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1"><section class="hero"><p class="eyebrow">Week 04 · Communities &amp; backbones · Go Nuts</p>
 <h1>One link or<br><em>twenty-four?</em></h1>
 <p class="lede">Do repeated Wikipedia links change which communities philosophers belong to?</p>
 <p>Keep the philosophers and their connections fixed. Change only whether an edge counts once—or as many times as the articles link to each other.</p>
@@ -13,7 +33,7 @@
 <section class="metrics" aria-label="Main measurements"><article><strong>1,374</strong><span>same philosophers in both models</span></article><article><strong>9,139</strong><span>same undirected edges</span></article><article><strong>0.658</strong><span>mean agreement across models</span></article><article><strong>24</strong><span>Erasmus–More combined link weight</span></article></section>
 <section class="prose"><p class="section-label">01 · The comparison</p><h2>Frequency changes what the algorithm sees.</h2><p>In an unweighted network, mentioning another philosopher once or repeatedly creates the same single edge. In a weighted network, repeated hyperlinks give that connection more weight. Louvain groups nodes by seeking high modularity: more internal connection than expected under its degree-based, or strength-based, baseline. Weighting therefore changes both the observed connections’ contributions and the objective’s baseline.</p><p>We already explored communities and weights in the Week 4 exercises. This post combines them into the weighted-versus-unweighted experiment suggested in <a href="https://sunelehmann.com/socialgraphs2026-web/weeks/week4.html#go-nuts">exercise 4.13</a>. We compare partitions—not whether a larger weighted modularity is “better.” Those scores use different quantities and are not directly comparable.</p></section>
 <section class="prose" id="evidence"><p class="section-label">02 · Where the groups overlap</p><h2>Nine groups each. Different memberships.</h2><p>For the fixed illustrative seed, 0, both runs find nine communities. The memberships are only partially aligned: <strong>NMI = 0.637</strong>. Normalized mutual information measures agreement between partitions without relying on arbitrary group numbers. A value of 1 means the same grouping; 0 means no shared information. It is <strong>not a percentage of correct philosophers</strong>.</p>
-<figure class="result-figure"><div class="figure-scroll" tabindex="0" role="region" aria-label="Community overlap figure; scroll horizontally on narrow screens"><img src="community-overlap.svg" width="1200" height="900" alt="Overlap counts between nine unweighted communities in rows and nine weighted communities in columns. The Confucius group keeps all 75 members; the Descartes group splits mainly into groups anchored by Aristotle, Kant and Locke. Seed-0 NMI is 0.637."></div><figcaption>Each cell counts the philosophers shared by one unweighted group (row) and one weighted group (column). Brighter cells have more shared members; blank cells mean zero. Groups are ordered by size and named after a high-degree member for orientation, not certified philosophical schools. Both partitions use the full giant component, without backbone filtering. <a href="community-overlap.svg">Open the full-size figure</a> · <a href="community_overlap.csv">Counts as CSV</a>.</figcaption></figure>
+<figure class="result-figure"><div class="figure-scroll" tabindex="0" role="region" aria-label="Community overlap figure; scroll horizontally on narrow screens"><img src="community-overlap.svg" width="1200" height="900" alt="Overlap counts between nine unweighted communities in rows and nine weighted communities in columns. The Confucius group keeps all 75 members; the Descartes group splits mainly into groups anchored by Aristotle, Kant and Locke. Seed-0 NMI is 0.637."></div><figcaption>Each cell counts the philosophers shared by one unweighted group (row) and one weighted group (column). Brighter cells have more shared members; blank cells mean zero. Groups are ordered by size and named after a high-degree member for orientation, not certified philosophical schools. Both partitions use the full giant component, without backbone filtering. <a href="community-overlap.svg">Open the full-size figure</a> · <a href="community_overlap.csv">Counts as CSV</a>.<br><a class="figure-link" href="community-overlap.svg" target="_blank" rel="noopener">Open full-size figure <span aria-hidden="true">↗</span></a></figcaption></figure>
 <p>Some groups survive nearly intact: all <strong>75</strong> members of the Confucius-anchored group stay together, and <strong>79 of 84</strong> in the Avicenna-anchored group share a weighted group. Other boundaries change: the 114-member Descartes-anchored group distributes mainly across the weighted Aristotle (<strong>33</strong>), Kant (<strong>43</strong>) and Locke (<strong>32</strong>) groups. A similar community count can conceal substantial reorganization.</p>
 <details><summary>Read the figure’s exact counts as a table</summary><div class="table-scroll"><table><caption>Seed 0 overlap counts; U/W labels match the figure.</caption><thead><tr><th scope="col">Unweighted / weighted</th><th scope="col">W0</th><th scope="col">W1</th><th scope="col">W2</th><th scope="col">W3</th><th scope="col">W4</th><th scope="col">W5</th><th scope="col">W6</th><th scope="col">W7</th><th scope="col">W8</th></tr></thead><tbody><tr><th scope="row">U0</th><td>7</td><td>140</td><td>7</td><td>15</td><td>3</td><td>4</td><td>0</td><td>62</td><td>0</td></tr><tr><th scope="row">U1</th><td>66</td><td>1</td><td>7</td><td>3</td><td>134</td><td>1</td><td>1</td><td>2</td><td>0</td></tr><tr><th scope="row">U2</th><td>2</td><td>18</td><td>152</td><td>17</td><td>1</td><td>0</td><td>0</td><td>6</td><td>0</td></tr><tr><th scope="row">U3</th><td>186</td><td>1</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th scope="row">U4</th><td>0</td><td>44</td><td>2</td><td>103</td><td>3</td><td>0</td><td>0</td><td>2</td><td>0</td></tr><tr><th scope="row">U5</th><td>33</td><td>43</td><td>32</td><td>2</td><td>1</td><td>0</td><td>0</td><td>3</td><td>0</td></tr><tr><th scope="row">U6</th><td>0</td><td>2</td><td>0</td><td>6</td><td>0</td><td>95</td><td>0</td><td>4</td><td>0</td></tr><tr><th scope="row">U7</th><td>4</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>79</td><td>0</td><td>0</td></tr><tr><th scope="row">U8</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>75</td></tr></tbody></table></div></details></section>
 <section class="prose"><p class="section-label">03 · Is this just a lucky seed?</p><h2>Compare the change with the algorithm’s own variability.</h2><p>Louvain can settle on different partitions depending on node visiting order. We ran each treatment with seeds <strong>0–19</strong>, resolution 1, on the identical graph. Unweighted runs found <strong>8–10 communities</strong>; weighted runs found <strong>7–10</strong>. The figure uses seed 0 by a fixed convention, not the seed with the most striking difference.</p>
@@ -31,5 +51,29 @@ pip install -r scripts/requirements-week4.txt
 python scripts/analyse_week4.py
 python -m http.server 8000</code></pre><p>Run from the repository root, then open <code>/weeks/week4/</code>. The inputs are committed; the analysis needs no live Wikipedia crawl. For a separate check, add <code>--output-dir /tmp/week4-check</code>. The static article must be reconciled if parameters or dependencies change.</p>
 <p class="downloads"><a href="../../scripts/analyse_week4.py">Rerunnable code</a><a href="../../scripts/requirements-week4.txt">Pinned dependencies</a><a href="results.json">Full results and audit</a><a href="../../README.md">Run instructions</a></p>
-<a class="button" href="../../index.html">All weeks →</a> <a href="../week5/">Next: Week 5 →</a></section></main>
-<footer><p>Muhammad Tayyab · DTU 02805 · <a href="https://github.com/tayyab859/Social-graphs-2026">Source code ↗</a></p></footer></body></html>
+<a class="button" href="../../index.html">All weeks →</a> <a href="../week5/">Next: Week 5 →</a></section>
+
+    <nav class="week-pagination" aria-label="Previous and next week">
+      <a href="../week3/"><span>← Week 03</span><strong>Hubs or bridges?</strong></a>
+      <a href="../week5/"><span>Week 05 →</span><strong>A small hyphen, a different vocabulary</strong></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a class="brand" href="../../" aria-label="LINK//MIRROR home">LINK<span class="brand-accent">//</span>MIRROR</a>
+      <p>Social Graphs and Interactions<br>DTU 02805 · Fall 2026</p>
+    </div>
+    <div>
+      <p class="footer-heading">Group members</p>
+      <ul class="member-list">
+        <li><span class="member-name">Muhammad Tayyab</span> <span class="student-id">s252771</span></li>
+        <li><span class="member-name">Nirudh Balan</span> <span class="student-id">s252604</span></li>
+      </ul>
+    </div>
+    <nav class="footer-links" aria-label="Course resources">
+      <a href="https://sunelehmann.com/socialgraphs2026-web/data/">Course data</a>
+      <a href="../../AI_METHODS.md">AI methods</a>
+      <a href="https://github.com/tayyab859/Social-graphs-2026">Source code <span aria-hidden="true">↗</span></a>
+    </nav>
+  </footer></body></html>

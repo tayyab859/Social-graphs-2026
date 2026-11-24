@@ -1,4 +1,26 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Week 8 project-preparation recap: a philosopher network and language candidate, a reproducible dataset check, and proposed validation."><title>Project preparation · Week 8 · LINK//MIRROR</title><link rel="stylesheet" href="../../styles.css"><link rel="stylesheet" href="../../course.css?v=2"><style>.hero h1{font-size:clamp(3rem,8vw,7rem)}.prose{padding:2rem 0;border-top:1px solid var(--line)}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;padding:1rem;border-bottom:1px solid var(--line)}th{min-width:7rem}nav a[aria-current]{color:var(--cyan)}</style></head><body><header class="site-header"><a class="brand" href="../../index.html">LINK//MIRROR</a><nav aria-label="Weekly navigation"><a href="../../weeks/week1/">1</a><a href="../../weeks/week2/">2</a><a href="../../weeks/week3/">3</a><a href="../../weeks/week4/">4</a><a href="../../weeks/week5/">5</a><a href="../../weeks/week6/">6</a><a href="../../weeks/week7/">7</a><a href="../../weeks/week8/" aria-current="page">8</a></nav></header><main>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Week 8 project-preparation recap: a philosopher network and language candidate, a reproducible dataset check, and proposed validation."><title>Project preparation · Week 8 · LINK//MIRROR</title><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="../../styles.css?v=4">
+  <link rel="stylesheet" href="../../course.css?v=4"></head><body><a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../" aria-label="LINK//MIRROR home"><span class="brand-mark" aria-hidden="true"></span><span>LINK<span class="brand-accent">//</span>MIRROR</span></a>
+      <nav class="week-nav" aria-label="Weekly navigation">
+        <a class="week-nav-home" href="../../">All weeks</a>
+        <a href="../../weeks/week1/" aria-label="Week 1">01</a>
+        <a href="../../weeks/week2/" aria-label="Week 2">02</a>
+        <a href="../../weeks/week3/" aria-label="Week 3">03</a>
+        <a href="../../weeks/week4/" aria-label="Week 4">04</a>
+        <a href="../../weeks/week5/" aria-label="Week 5">05</a>
+        <a href="../../weeks/week6/" aria-label="Week 6">06</a>
+        <a href="../../weeks/week7/" aria-label="Week 7">07</a>
+        <a href="../../weeks/week8/" aria-label="Week 8 project preparation" aria-current="page">08</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
 <section class="hero"><p class="eyebrow">Week 08 · Project-preparation recap · 24 November 2026</p>
 <h1>Networks ×<br><em>Language.</em></h1>
 <p class="lede">Can a community in a link network also be recognised in the words used to describe its members?</p>
@@ -34,4 +56,29 @@ python3 weeks/week8/check_dataset.py
 <p><strong>Figure idea, not a result:</strong> a horizontal dot-and-interval plot with one row per Louvain seed. The x-axis is mean within-community cosine similarity; a coloured dot shows the actual score and a grey interval shows the central 95% of the era-shuffled scores. Readers could immediately see whether any apparent effect survives the comparison and changes of seed. No simulated result is displayed here.</p>
 <p>Before adopting this candidate, the group should decide whether short biographical descriptions answer a question it cares about. Coverage is restricted to Wikipedia’s pre-1900 lists, links reflect editorial choices, and era labels are coarse. The next step is the proposed pilot and pair inspection—not a claim that language and communities already agree.</p>
 <p>AI assisted this recap and the check script. The reported counts were computed from the committed TSVs; no new Louvain, TF–IDF, null-model or human-label validation results are claimed.</p>
-<a class="button" href="../../index.html">All weeks</a> <a href="../week7/">Week 7 source investigation</a></section></main><footer><p>Muhammad Tayyab · DTU 02805 · <a href="../../AI_METHODS.md">AI methods</a> · <a href="https://github.com/tayyab859/Social-graphs-2026">Source code ↗</a></p></footer></body></html>
+</section>
+
+    <nav class="week-pagination" aria-label="Previous and next week">
+      <a href="../week7/"><span>← Week 07</span><strong>A sentence or a whole story?</strong></a>
+      <a href="../../"><span>Course homepage →</span><strong>All weeks</strong></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a class="brand" href="../../" aria-label="LINK//MIRROR home">LINK<span class="brand-accent">//</span>MIRROR</a>
+      <p>Social Graphs and Interactions<br>DTU 02805 · Fall 2026</p>
+    </div>
+    <div>
+      <p class="footer-heading">Group members</p>
+      <ul class="member-list">
+        <li><span class="member-name">Muhammad Tayyab</span> <span class="student-id">s252771</span></li>
+        <li><span class="member-name">Nirudh Balan</span> <span class="student-id">s252604</span></li>
+      </ul>
+    </div>
+    <nav class="footer-links" aria-label="Course resources">
+      <a href="https://sunelehmann.com/socialgraphs2026-web/data/">Course data</a>
+      <a href="../../AI_METHODS.md">AI methods</a>
+      <a href="https://github.com/tayyab859/Social-graphs-2026">Source code <span aria-hidden="true">↗</span></a>
+    </nav>
+  </footer></body></html>

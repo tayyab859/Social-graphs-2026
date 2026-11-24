@@ -2,10 +2,30 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="A reproducible triangle test on Marvel Wikipedia: 500 degree-preserving shuffles, all 303 characters retained.">
 <title>Triangles beyond the hubs · Week 2 · LINK//MIRROR</title>
-<link rel="stylesheet" href="../../styles.css"><link rel="stylesheet" href="../../course.css?v=2">
-<style>.hero h1{font-size:clamp(3rem,8vw,7rem)}.prose{padding:3rem 0}.result-figure{margin:1.5rem 0}.result-figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px}figcaption{color:var(--muted);max-width:900px;margin-top:1rem}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{padding:.8rem;text-align:left;border-bottom:1px solid var(--line)}.callout{padding:1.5rem;border-left:3px solid var(--cyan);background:var(--panel)}nav a[aria-current]{color:var(--cyan)}@media(max-width:600px){.metrics{grid-template-columns:repeat(2,1fr)}}</style></head>
-<body><header class="site-header"><a class="brand" href="../../index.html">LINK//MIRROR</a><nav aria-label="Weekly navigation"><a href="../../weeks/week1/">1</a><a href="../../weeks/week2/" aria-current="page">2</a><a href="../../weeks/week3/">3</a><a href="../../weeks/week4/">4</a><a href="../../weeks/week5/">5</a><a href="../../weeks/week6/">6</a><a href="../../weeks/week7/">7</a><a href="../../weeks/week8/">8</a></nav></header>
-<main><section class="hero"><p class="eyebrow">Week 02 · Models &amp; null models · Go Nuts</p>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="../../styles.css?v=4">
+  <link rel="stylesheet" href="../../course.css?v=4"></head>
+<body><a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../" aria-label="LINK//MIRROR home"><span class="brand-mark" aria-hidden="true"></span><span>LINK<span class="brand-accent">//</span>MIRROR</span></a>
+      <nav class="week-nav" aria-label="Weekly navigation">
+        <a class="week-nav-home" href="../../">All weeks</a>
+        <a href="../../weeks/week1/" aria-label="Week 1">01</a>
+        <a href="../../weeks/week2/" aria-label="Week 2" aria-current="page">02</a>
+        <a href="../../weeks/week3/" aria-label="Week 3">03</a>
+        <a href="../../weeks/week4/" aria-label="Week 4">04</a>
+        <a href="../../weeks/week5/" aria-label="Week 5">05</a>
+        <a href="../../weeks/week6/" aria-label="Week 6">06</a>
+        <a href="../../weeks/week7/" aria-label="Week 7">07</a>
+        <a href="../../weeks/week8/" aria-label="Week 8 project preparation">08</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1"><section class="hero"><p class="eyebrow">Week 02 · Models &amp; null models · Go Nuts</p>
 <h1>Triangles beyond<br><em>the hubs.</em></h1>
 <p class="lede">Does the Marvel Wikipedia network have more triangles than expected given how many connections each character has?</p>
 <p>Keep every character’s degree. Shuffle who connects to whom. Count what survives.</p>
@@ -13,7 +33,7 @@
 <section class="metrics" aria-label="Main results"><article><strong>1,839</strong><span>observed triangles</span></article><article><strong>1,153.7</strong><span>mean after shuffling</span></article><article><strong>1.59×</strong><span>observed / null mean</span></article><article><strong>17</strong><span>isolated characters retained</span></article></section>
 <section class="prose"><p class="section-label">01 · Why this question?</p><h2>Popularity is not the whole pattern.</h2><p>A triangle is a group of three distinct character pages with an undirected link between every pair. Hubs create many opportunities for triangles, so comparing with a random graph that loses the hubs would answer the wrong question. Our null keeps the exact number of neighbours of <em>each character</em>. We ask whether the arrangement of those connections contains additional triangle structure.</p></section>
 <section class="prose" id="evidence"><p class="section-label">02 · The measured result</p><h2>The real count sits beyond every shuffle.</h2>
-<figure class="result-figure"><a href="triangle-shuffles.svg" aria-label="Open full-size triangle histogram"><img src="triangle-shuffles.svg" width="1100" height="550" alt="Histogram of 500 shuffled triangle counts, ranging from 978 to 1325, with the observed 1839 marked by an orange line far to the right."></a><figcaption>The horizontal axis is triangle count; bar height is the number of shuffled networks in that bin. Cyan bars show the degree-preserving baseline. The orange line marks the real network. The empty space between them is the observed excess. The axis starts at zero. <a href="shuffle_counts.csv">Download every count and seed (CSV)</a>.</figcaption></figure>
+<figure class="result-figure"><a href="triangle-shuffles.svg" aria-label="Open full-size triangle histogram"><img src="triangle-shuffles.svg" width="1100" height="550" alt="Histogram of 500 shuffled triangle counts, ranging from 978 to 1325, with the observed 1839 marked by an orange line far to the right."></a><figcaption>The horizontal axis is triangle count; bar height is the number of shuffled networks in that bin. Cyan bars show the degree-preserving baseline. The orange line marks the real network. The empty space between them is the observed excess. The axis starts at zero. <a href="shuffle_counts.csv">Download every count and seed (CSV)</a>.<br><a class="figure-link" href="triangle-shuffles.svg" target="_blank" rel="noopener">Open full-size figure <span aria-hidden="true">↗</span></a></figcaption></figure>
 <div class="table-scroll"><table><caption>Triangle counts and the one-sided comparison</caption><thead><tr><th>Measurement</th><th>Result</th></tr></thead><tbody>
 <tr><td>Observed</td><td>1,839</td></tr><tr><td>Shuffle mean ± sample SD</td><td>1,153.66 ± 46.82</td></tr><tr><td>Shuffle minimum–maximum</td><td>978–1,325</td></tr><tr><td>Shuffles at least as large as observed</td><td>0 / 500</td></tr><tr><td>One-sided Monte Carlo p, (1 + exceedances) / (1 + 500)</td><td>0.001996</td></tr><tr><td>Standardized distance, (observed − mean) / SD</td><td>14.64 SD</td></tr></tbody></table></div>
 <p class="callout"><strong>Finding:</strong> the real network contains 1.59 times the shuffled mean triangle count. The degree sequence alone does not explain this many triangles under our shuffle baseline. This is evidence of additional organization in the links, not proof that characters are friends or that any particular mechanism caused the pattern.</p><p>The p-value is a finite-simulation estimate, not zero and not the probability that the null is true. The standardized distance is descriptive; we do not convert it into a normal-tail probability.</p></section>
@@ -24,5 +44,29 @@
 source .venv-week2/bin/activate
 pip install -r scripts/requirements-week2.txt
 python scripts/analyse_week2.py
-python -m http.server 8000</code></pre><p>Run from the repository root. Open <code>/weeks/week2/</code>. <a href="../../scripts/analyse_week2.py">Analysis code</a> · <a href="results.json">Full results</a> · <a href="../../README.md">Run instructions</a></p><a class="button" href="../../index.html">All weeks →</a> <a href="../week3/">Next: Week 3 →</a></section></main>
-<footer><p>Muhammad Tayyab · DTU 02805 · <a href="https://github.com/tayyab859/Social-graphs-2026">Source code ↗</a></p></footer></body></html>
+python -m http.server 8000</code></pre><p>Run from the repository root. Open <code>/weeks/week2/</code>. <a href="../../scripts/analyse_week2.py">Analysis code</a> · <a href="results.json">Full results</a> · <a href="../../README.md">Run instructions</a></p><a class="button" href="../../index.html">All weeks →</a> <a href="../week3/">Next: Week 3 →</a></section>
+
+    <nav class="week-pagination" aria-label="Previous and next week">
+      <a href="../week1/"><span>← Week 01</span><strong>Who links back?</strong></a>
+      <a href="../week3/"><span>Week 03 →</span><strong>Hubs or bridges?</strong></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a class="brand" href="../../" aria-label="LINK//MIRROR home">LINK<span class="brand-accent">//</span>MIRROR</a>
+      <p>Social Graphs and Interactions<br>DTU 02805 · Fall 2026</p>
+    </div>
+    <div>
+      <p class="footer-heading">Group members</p>
+      <ul class="member-list">
+        <li><span class="member-name">Muhammad Tayyab</span> <span class="student-id">s252771</span></li>
+        <li><span class="member-name">Nirudh Balan</span> <span class="student-id">s252604</span></li>
+      </ul>
+    </div>
+    <nav class="footer-links" aria-label="Course resources">
+      <a href="https://sunelehmann.com/socialgraphs2026-web/data/">Course data</a>
+      <a href="../../AI_METHODS.md">AI methods</a>
+      <a href="https://github.com/tayyab859/Social-graphs-2026">Source code <span aria-hidden="true">↗</span></a>
+    </nav>
+  </footer></body></html>
