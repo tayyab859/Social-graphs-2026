@@ -35,9 +35,9 @@ python3 analysis.py
 ## Course group
 
 - Muhammad Tayyab (`s252771`)
-- Nirudh Balan (`s252604`)
+- Anirudh Balan (`s252604`)
 
-## Course website (Weeks 1–8)
+## Course website (Weeks 1–7)
 
 The root homepage now links to eight weekly subsections. Week 1's original post is
 preserved at `weeks/week1/`. Week 6's **Marvel Matchmaker** is at `weeks/week6/`.
@@ -46,7 +46,6 @@ Week 3’s fixed-ranking removal experiment is published at `weeks/week3/`.
 Week 4’s weighted-versus-unweighted philosopher comparison is published at `weeks/week4/`.
 Week 5’s hyphen-tokenization comparison is published at `weeks/week5/`.
 Week 7’s sentence-versus-article comparison is published at `weeks/week7/`.
-Week 8’s project-preparation recap is published at `weeks/week8/`.
 
 Week 6 compares TF-IDF document similarity, TF-IDF-weighted Word2Vec document
 vectors, and Wikipedia link neighbors. It includes a browser explorer, aggregate

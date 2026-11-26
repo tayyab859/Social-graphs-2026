@@ -420,7 +420,7 @@ main { padding: clamp(1.25rem, 4vw, 3.25rem) 0; }
 
   .week-nav {
     display: grid;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     flex: 1 0 100%;
   }
 
